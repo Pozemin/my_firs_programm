@@ -1,0 +1,99 @@
+window.title("App 1001") #Добавляем название приложения.
+window.geometry('1200x800')
+
+frame = Frame(
+   window, #Обязательный параметр, который указывает окно для размещения Frame.
+   padx = 10, #Задаём отступ по горизонтали.
+   pady = 10 #Задаём отступ по вертикали.
+)
+frame.pack(expand=True)
+n = 1
+
+class player:
+    name = Label(
+       frame,
+       text=f"Введите name {n} player  "
+    )
+    name.grid(row=1, column=n)
+    stavka = Label(
+       frame,
+       text="Введите свой kon  ",
+    )
+    stavka.grid(row=2, column=n)
+
+    name = Entry(
+       frame, #Используем нашу заготовку с настроенными отступами.
+    )
+    name.grid(row=1, column=n+1)
+
+    stavka = Entry(
+       frame, #Используем нашу заготовку с настроенными отступами.
+    )
+    stavka.grid(row=2, column=n+1)
+n = 5
+class player:
+    name = Label(
+       frame,
+       text=f"Введите name {n} player  "
+    )
+    name.grid(row=1, column=n)
+    stavka = Label(
+       frame,
+       text="Введите свой kon  ",
+    )
+    stavka.grid(row=2, column=n)
+
+    name = Entry(
+       frame, #Используем нашу заготовку с настроенными отступами.
+    )
+    name.grid(row=1, column=n+1)
+
+    stavka = Entry(
+       frame, #Используем нашу заготовку с настроенными отступами.
+    )
+    stavka.grid(row=2, column=n+1)
+n = 10
+class player:
+    name = Label(
+       frame,
+       text=f"Введите name {n} player  "
+    )
+    name.grid(row=1, column=n)
+    stavka = Label(
+       frame,
+       text="Введите свой kon  ",
+    )
+    stavka.grid(row=2, column=n)
+
+    name = Entry(
+       frame, #Используем нашу заготовку с настроенными отступами.
+    )
+    name.grid(row=1, column=n+1)
+
+    stavka = Entry(
+       frame, #Используем нашу заготовку с настроенными отступами.
+    )
+    stavka.grid(row=2, column=n+1)
+n =15
+class player:
+    name = Label(
+       frame,
+       text=f"Введите name {n} player  "
+    )
+    name.grid(row=1, column=n)
+    stavka = Label(
+       frame,
+       text="Введите свой kon  ",
+    )
+    stavka.grid(row=2, column=n)
+
+    name = Entry(
+       frame, #Используем нашу заготовку с настроенными отступами.
+    )
+    name.grid(row=1, column=n+1)
+
+    stavka = Entry(
+       frame, #Используем нашу заготовку с настроенными отступами.
+    )
+    stavka.grid(row=2, column=n+1)
+window.mainloop()
