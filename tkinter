@@ -1,0 +1,42 @@
+import tkinter as tk
+from tkinter import *
+from tkinter import ttk
+
+
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        label_a = tk.Label(self, text="Label A", bg="yellow")
+        label_b = tk.Label(self, text="Label B", bg="orange")
+
+        self.title("1001")
+        self.geometry("1000x600")
+        columns = ( '1', '2', '3', '4')
+        self.people = [("Artem","Artem", 380, "-"), ("Bob","Bob", 420, "-"), ("Sam","Sam", 280, "-"), ("Artem")]
+        self.tree = ttk.Treeview(self, show='headings', columns=columns)
+        self.tree.heading('#1', text='Раздача')
+        self.tree.heading("#2",  text="Игрок")
+        self.tree.heading("#3", text="Счет")
+        self.tree.heading("#4", text="Болты")
+        ysb = ttk.Scrollbar(self, orient=tk.VERTICAL, command=self.tree.yview)
+        self.tree.configure(yscroll=ysb.set)
+        for person in self.people:
+            self.tree.insert("", END,  values=person)
+
+        opts = { 'ipadx': 10, 'ipady': 10 , 'sticky': 'nswe' }
+        label_a.grid(row=0, column=0, **opts)
+        self.tree.grid(row=4, column=0, **opts)
+        label_b.grid(row=1, column=0, **opts)
+
+
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
